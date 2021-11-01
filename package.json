@@ -1,0 +1,23 @@
+{
+  "name": "roblox-a-discord",
+  "version": "1.0.0",
+  "description": "Discord bane� a Roblox de la API :'v",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigo-Bustamante/roblox-a-discord.git"
+  },
+  "author": "Yo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rodrigo-Bustamante/roblox-a-discord/issues"
+  },
+  "homepage": "https://github.com/Rodrigo-Bustamante/roblox-a-discord#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
