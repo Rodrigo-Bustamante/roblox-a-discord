@@ -3,11 +3,8 @@ const express = require('express')
 
 const https = require('https');
 
-app.post('/', function(req, res){
-    console.log("\n\nNuevo req");
+app.post('/:id/:token', function(req, res){
     console.log(req.body);
-
-    res.send(":'v")
 });
 
 const server = app.listen(process.env.PORT, () => {
