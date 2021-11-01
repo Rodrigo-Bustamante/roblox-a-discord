@@ -12,7 +12,7 @@ app.use(express.urlencoded());
 
 const https = require('https');
 
-app.post('/:id/:token/:data', function(req, res){
+app.post('/:id/:token', function(req, res){
     console.log(req.body);
 });
 
