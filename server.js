@@ -37,7 +37,7 @@ app.patch('/:id/:token', function(req, res){
 
 app.delete('/:id/:token', function(req, res){
     axios
-    .patch(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`)
+    .delete(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`)
     .then(()=>{
         res.send('Success');
     })
