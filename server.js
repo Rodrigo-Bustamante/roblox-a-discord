@@ -3,7 +3,7 @@ const express = require('express')
 
 const https = require('https');
 
-app.get('/', function(req, res){
+app.post('/', function(req, res){
     console.log("\n\nNuevo req");
     console.log(req.body);
 
