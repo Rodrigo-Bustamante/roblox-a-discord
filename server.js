@@ -3,9 +3,7 @@ const express = require('express')
 
 const https = require('https');
 
-app.use(express.static('public'));
-
-app.get('/postdiscord', function(req, res){
+app.get('/', function(req, res){
     console.log("\n\nNuevo req");
     console.log(req.body);
 
