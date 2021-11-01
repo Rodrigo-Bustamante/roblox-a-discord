@@ -25,9 +25,19 @@ app.post('/:id/:token', function(req, res){
 });
 
 app.patch('/:id/:token', function(req, res){
-    console.log('Patch')
     axios
     .patch(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`, req.body)
+    .then(()=>{
+        res.send('Success');
+    })
+    .catch(error => {
+        console.error(error)
+    })
+})
+
+app.delete('/:id/:token', function(req, res){
+    axios
+    .patch(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`)
     .then(()=>{
         res.send('Success');
     })
