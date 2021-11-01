@@ -4,7 +4,7 @@ const express = require('express')
 const https = require('https');
 
 app.post('/:id/:token', function(req, res){
-    console.log(req.body);
+    console.log(req);
 });
 
 const server = app.listen(process.env.PORT, () => {
