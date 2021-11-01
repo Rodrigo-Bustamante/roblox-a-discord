@@ -1,10 +1,19 @@
 const express = require('express')
     , app = express();
 
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
+app.use(express.json());
+app.use(express.urlencoded());
+
 const https = require('https');
 
 app.post('/:id/:token/:data', function(req, res){
-    console.log(req.headers);
+    console.log(req.body);
 });
 
 const server = app.listen(process.env.PORT, () => {
