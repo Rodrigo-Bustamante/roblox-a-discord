@@ -17,6 +17,12 @@ app.post('/:id/:token', function(req, res){
     console.log(req.body);
     axios
     .post(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`, req.body)
+    .then(ress =>{
+        res.send('Success')
+    })
+    .catch(error => {
+        console.error(error)
+    })
 });
 
 const server = app.listen(process.env.PORT, () => {
