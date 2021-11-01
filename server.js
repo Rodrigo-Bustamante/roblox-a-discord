@@ -14,7 +14,6 @@ app.use(express.urlencoded());
 const https = require('https');
 
 app.post('/:id/:token', function(req, res){
-    console.log(req.body);
     axios
     .post(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`, req.body)
     .then(ress =>{
@@ -24,6 +23,17 @@ app.post('/:id/:token', function(req, res){
         console.error(error)
     })
 });
+
+app.patch('/:id/:token', function(req, res){
+    axios
+    .patch(`https://discord.com/api/webhooks/${req.params.id}/${req.params.token}`, req.body)
+    .then(()=>{
+        res.send('Success');
+    })
+    .catch(error => {
+        console.error(error)
+    })
+})
 
 const server = app.listen(process.env.PORT, () => {
     console.log(`server listening on ${server.address().port}`);
