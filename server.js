@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+console.log(`Se ve bonito :3`);
+
 app.use(express.json());
 app.use(express.urlencoded());
 
