@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-console.log(`Los cambios se hacen a Github`)
+
+
 
 app.use(express.json());
 app.use(express.urlencoded());
